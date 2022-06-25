@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cvikpuj.controller.MenuController">
+   <children>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0">
+        <buttons>
+          <Button fx:id="studentsBtn" mnemonicParsing="false" onAction="#openStudents" text="Studenti" />
+          <Button fx:id="collegesBtn" mnemonicParsing="false" onAction="#openColleges" text="Fakulteti" />
+            <Button fx:id="cvikListBtn" layoutX="125.0" layoutY="18.0" mnemonicParsing="false" onAction="#openCvikList" text="Cvik Lista" />
+            <Button fx:id="cvikBtn" layoutX="220.0" layoutY="18.0" mnemonicParsing="false" onAction="#openCvik" text="Cvik" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="BASELINE_LEFT" spacing="5.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cvikpuj.controller.LoginController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Label fx:id="errorMsg" textFill="RED">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label text="Unesite korisničko ime" />
+        <TextField fx:id="usernameTxt" />
+        <Label text="Unesite lozinku" />
+        <PasswordField fx:id="passwordTxt" />
+        <Button mnemonicParsing="false" onAction="#onLogin" text="Prijavi se" />
+        <Button fx:id="cvikBtn" layoutX="220.0" layoutY="18.0" mnemonicParsing="false" onAction="#openCvik" text="Cvik" />
+    </children>
+</VBox>

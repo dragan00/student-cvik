@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cvikpuj.controller.CollegeController">
+    <children>
+        <TableView fx:id="collegeTbl" onMouseClicked="#selectCollege" prefHeight="400.0" prefWidth="306.0">
+            <columns>
+                <TableColumn fx:id="collegeIDCol" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="collegeNameCol" prefWidth="236.0" text="Naziv" />
+            </columns>
+        </TableView>
+        <TextField fx:id="collegeNameTxt" layoutX="326.0" layoutY="49.0" prefHeight="24.0" prefWidth="251.0" promptText="Unesite naziv fakulteta" />
+        <Button fx:id="addCollegeBtn" layoutX="365.0" layoutY="88.0" mnemonicParsing="false" onAction="#addCollege" prefHeight="27.0" prefWidth="162.0" text="Dodaj Fakultet" />
+        <Button layoutX="368.0" layoutY="129.0" mnemonicParsing="false" onAction="#deleteCollege" prefHeight="27.0" prefWidth="162.0" style="-fx-background-color: red;" text="Pobriši Fakultet" textFill="WHITE" />
+      <Button fx:id="backBtn" layoutX="366.0" layoutY="176.0" mnemonicParsing="false" onAction="#goBack" prefHeight="24.0" prefWidth="162.0" text="Početna stranica" />
+
+        </children>
+</AnchorPane>

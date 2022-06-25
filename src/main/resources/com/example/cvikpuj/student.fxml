@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cvikpuj.controller.StudentController">
+    <children>
+        <TableView fx:id="studentTbl" onMouseClicked="#selectStudent" prefHeight="287.0" prefWidth="393.0">
+            <columns>
+                <TableColumn fx:id="studentIDCol" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="studentNameCol" prefWidth="126.0" text="Naziv" />
+                <TableColumn fx:id="studentCardCol" prefWidth="191.0" text="Broj Kartice" />
+            </columns>
+        </TableView>
+        <TextField fx:id="studentNameTxt" layoutX="406.0" layoutY="49.0" promptText="Ime i Prezime" />
+        <TextField fx:id="studentCardTxt" layoutX="406.0" layoutY="95.0" promptText="Broj Kartice" />
+        <Button fx:id="addStudentBtn" layoutX="410.0" layoutY="144.0" mnemonicParsing="false" onAction="#addStudent" prefHeight="24.0" prefWidth="171.0" text="Dodaj Studenta" />
+        <Button fx:id="deleteBtn" layoutX="411.0" layoutY="179.0" mnemonicParsing="false" onAction="#deleteStudent" prefHeight="27.0" prefWidth="171.0" style="-fx-background-color: red;" text="Pobriši Studenta" textFill="WHITE" />
+        <Button fx:id="backBtn" layoutX="410.0" layoutY="214.0" mnemonicParsing="false" onAction="#goBack" prefHeight="24.0" prefWidth="171.0" text="Početna stranica" />
+    </children>
+</AnchorPane>
