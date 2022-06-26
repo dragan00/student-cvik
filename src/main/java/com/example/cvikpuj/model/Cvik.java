@@ -55,22 +55,4 @@ public class Cvik extends Table{
         long timeMilli = date.getTime();
         this.entry_timestamp = String.valueOf(timeMilli);
     }
-
-
-    public static Object get_by_card(String card) throws Exception {
-        String SQL = "SELECT * FROM Student WHERE card = '" + card + "'";
-        Statement stmt = Database.CONNECTION.createStatement();
-        ResultSet rs = stmt.executeQuery(SQL);
-        if (rs.next()){
-            Object obj = new Cvik();
-            Class<?> otherCls = obj.getClass();
-            for (Field f : otherCls.getDeclaredFields()){
-                f.set(obj, rs.getObject(f.getName()));
-            }
-            System.out.println("Uspjesno prijavljen student.");
-            return obj;
-        } else {
-            throw new Exception("Ne postoji student");
-        }
-    }
 }

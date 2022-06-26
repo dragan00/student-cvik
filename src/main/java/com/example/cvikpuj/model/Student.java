@@ -55,20 +55,4 @@ public class Student extends Table{
             throw new Exception("Ne postoji student");
         }
     }
-
-    public static Object get_by_id(int id) throws Exception {
-        String SQL = "SELECT * FROM Student WHERE id = '" + id + "'";
-        Statement stmt = Database.CONNECTION.createStatement();
-        ResultSet rs = stmt.executeQuery(SQL);
-        if (rs.next()){
-            Object obj = new Student();
-            Class<?> otherCls = obj.getClass();
-            for (Field f : otherCls.getDeclaredFields()){
-                f.set(obj, rs.getObject(f.getName()));
-            }
-            return obj;
-        } else {
-            throw new Exception("Ne postoji student");
-        }
-    }
 }
